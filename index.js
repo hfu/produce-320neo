@@ -83,7 +83,7 @@ const produce = (z, x, y) => {
         'export', '--index-type=sparse_file_array',
         `--config=${exportConfigPath}`, 
         '--output-format=geojsonseq', 
-        '--input-format=pbf,add_metadata=false,pbf_compression=false',
+        '--input-format=opl',
       ], { 
         stdio: ['pipe', 'pipe', 'inherit']
       })
@@ -92,13 +92,13 @@ const produce = (z, x, y) => {
       const osmiumExtract = spawn('osmium', [
         'extract', '--bbox', bbox.join(','),
         '--strategy=smart', '--progress',
-        '--output-format=pbf,add_metadata=false,pbf_compression=false',
+        '--output-format=opl',
         planetPath
       ], {
         stdio: ['inherit', 'pipe', 'inherit']
       })
       osmiumExtract.stdout.pipe(osmiumExport.stdin)
-      osmiumExtract.stdout.pipe(new fs.createWriteStream(`${z}-${x}-${y}.osm.pbf`))
+      osmiumExtract.stdout.pipe(new fs.createWriteStream(`${z}-${x}-${y}.opl`))
    }
   })
 }
