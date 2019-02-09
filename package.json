@@ -1,0 +1,31 @@
+{
+  "name": "produce-320neo",
+  "version": "1.0.0",
+  "description": "a New Extract Option for produce-320",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfu/produce-320neo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/hfu/produce-320neo/issues"
+  },
+  "homepage": "https://github.com/hfu/produce-320neo#readme",
+  "dependencies": {
+    "@mapbox/tilebelt": "^1.0.1",
+    "better-queue": "^3.8.10",
+    "config": "^3.0.1",
+    "hh-mm-ss": "^1.2.0",
+    "hjson": "^3.1.2",
+    "json-text-sequence": "^0.1.1",
+    "prettysize": "^2.0.0",
+    "tempy": "^0.2.1",
+    "winston": "^3.2.1"
+  }
+}
